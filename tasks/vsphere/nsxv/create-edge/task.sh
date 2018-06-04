@@ -33,6 +33,21 @@ get_cidr() {
   echo "$FIRST_THREE.0/$MASK"
 }
 
+echo "**** begin variable display *****"
+echo $NSX_EDGE_GEN_NSX_MANAGER_ADDRESS
+echo $NSX_EDGE_GEN_NSX_MANAGER_ADMIN_USER
+echo $NSX_EDGE_GEN_NSX_MANAGER_ADMIN_PASSWD
+echo $VCENTER_HOST
+echo $VCENTER_USR
+echo $VCENTER_PWD
+echo $NSX_EDGE_GEN_NSX_MANAGER_TRANSPORT_ZONE
+echo $VCENTER_DATA_CENTER
+echo $NSX_EDGE_GEN_EDGE_DATASTORE
+echo NSX_EDGE_GEN_EDGE_CLUSTER
+echo "**** end variable display *****"
+
+
+
 echo "*** begin nsx.ini ******"
 cat pynsxv/nsx.ini
 echo "***** end nsx.ini ******"
