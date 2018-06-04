@@ -39,15 +39,17 @@ then
   exit 1
 fi
 # Create logical switches
-for labwire_id in $(seq $NUM_LOGICAL_SWITCHES); do
-  echo "***** debugging ********"
-  echo $NSX_EDGE_GEN_NAME
-  echo $OWNER_NAME
-  echo $labwire_id
-  pynsxv_local lswitch -n "labwire-$NSX_EDGE_GEN_NAME-$OWNER_NAME-$labwire_id" create
-done
+#for labwire_id in $(seq $NUM_LOGICAL_SWITCHES); do
+#  echo "***** debugging ********"
+#  echo $NSX_EDGE_GEN_NAME
+#  echo $OWNER_NAME
+#  echo $labwire_id
+#  pynsxv_local lswitch -n "labwire-$NSX_EDGE_GEN_NAME-$OWNER_NAME-$labwire_id" create
+#done
 
 # Create an edge
+echo "****** debugging*******"
+echo  "running esg create command"
 pynsxv_local esg create -n $NSX_EDGE_GEN_NAME -pg "$ESG_DEFAULT_UPLINK_PG_1"
 
 # Add Cert
