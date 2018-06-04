@@ -40,6 +40,10 @@ then
 fi
 # Create logical switches
 for labwire_id in $(seq $NUM_LOGICAL_SWITCHES); do
+  echo "***** debugging ********
+  echo $NSX_EDGE_GEN_NAME
+  echo $OWNER_NAME
+  echo $labwire_id
   pynsxv_local lswitch -n "labwire-$NSX_EDGE_GEN_NAME-$OWNER_NAME-$labwire_id" create
 done
 
